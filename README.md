@@ -1,10 +1,10 @@
-# Issue Tracker
+# Issue Tracker  (CS50 final project)
 
 #### Video Demo:  <URL HERE>
 
 #### Description:
 Simple issue tracker created with Python Flask, SQL, sqlite3.
-
+ 
 - Login, register functions with hashed password stored in the SQL and login data stored in the session storage.
 - In the home screen, you can see the titles of the issues with create/delete titles functions.
 - If you press details on the title in the home screen, you can see all the corresponding issues. You can also create/delete/update issues.
@@ -14,9 +14,10 @@ Simple issue tracker created with Python Flask, SQL, sqlite3.
 #### how to run
 
 - run `.\env\Scripts\activate` to activate the virtual server.
+- install all libraries in the requirements.txt
 - run `python app.py` to run the server, then go to localhost 5000 
 
-#### issues.db
+#### issue.db
 
 - CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, hash TEXT )
 
