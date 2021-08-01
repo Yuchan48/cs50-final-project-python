@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block title %} home {% endblock %} {% with
+messages = get_flashed_messages() %} {% if messages %}
+<header>{{ message }}</header>
+{% endif %} {% endwith %} {% block main %}
+<div class="container">
+  <div class="title">
+    <h3>Issue titles</h3>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if titles %} {% for title in titles %}
+      <tr>
+        <td>{{title[0]}}</td>
+        <td>{{title[1]}}</td>
+        <td>
+          <div>
+            <a href="/tdelete/{{title[0]}}">Delete</a>
+            <a href="/issues/{{title[0]}}">Issues</a>
+          </div>
+        </td>
+      </tr>
+      {% endfor %} {% else %}
+      <tr>
+        <td colspan="3">No title: please create one below</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+
+  <div class="home_form">
+    <h4 style="text-align: center; margin-top: 2rem;">Create title</h4>
+    <form action="/tcreate" method="post">
+      <input type="text" name="title" placeholder="New title" />
+      <button type="submit">Create List</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

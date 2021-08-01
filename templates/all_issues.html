@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block title %} All Issues {% endblock %} {% block
+main %}
+<div class="container">
+  <div class="title">
+    <h4>All Issues</h4>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Message</th>
+        <th>User</th>
+        <th>Created On</th>
+        <th>Updated On</th>
+        <th>State</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if issues %} {% for issue in issues %}
+      <tr>
+        <td>{{issue[0]}}</td>
+        <td>{{issue[2]}}</td>
+        <td>{{issue[6]}}</td>
+        <td>{{issue[3]}}</td>
+        <td>{{issue[4]}}</td>
+        <td>{% if issue[7] == 1 %} open {% else %} close {% endif %}</td>
+        <td>
+          <div>
+            <a href="/alldelete/{{issue[0]}}">Delete</a>
+          </div>
+        </td>
+      </tr>
+      {% endfor %} {% else %}
+      <tr>
+        <td colspan="7">No issue: please create one below</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

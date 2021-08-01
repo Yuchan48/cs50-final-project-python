@@ -1,0 +1,26 @@
+{% extends "layout.html" %} {% block title %} CS50 Finance {% endblock %} {%
+with messages = get_flashed_messages() %} {% if messages %}
+<header>{{ message }}</header>
+{% endif %} {% endwith %} {% block main %}
+<div class="container_login">
+  <div class="title">
+    <h4>Register</h4>
+  </div>
+  <form action="/register" method="POST">
+    <input type="text" placeholder="Username" name="username" />
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      autocomplete="off"
+    />
+    <input
+      type="password"
+      name="confirmPassword"
+      placeholder="Confirm Password"
+      autocomplete="off"
+    />
+    <button type="submit">Register</button>
+  </form>
+</div>
+{% endblock %}

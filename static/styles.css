@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input {
+  padding: 0.2rem;
+  border: 1px solid #000;
+}
+
+main {
+  min-height: 90vh;
+}
+
+.container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+table {
+  width: 80%;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 2px solid rgb(90, 88, 88);
+  text-align: center;
+}
+
+th,
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table a,
+button {
+  background-color: rgb(100, 97, 97);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+}
+
+table a:hover,
+button:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(117, 117, 117);
+}
+
+.home_form {
+  margin-top: 2rem;
+}
+
+.issue_form h4 {
+  margin-top: 2rem;
+}
+
+.issue_form {
+  margin-bottom: 2rem;
+}
+
+.form_col {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form_col input,
+.form_col select {
+  margin: 0.5rem 0;
+}
+
+.input_wide {
+  width: 100%;
+  max-width: 600px;
+}
+
+.container_login {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.container_login form input {
+  width: 80%;
+  max-width: 400px;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 40rem) {
+  table {
+    font-size: 12px;
+  }
+}

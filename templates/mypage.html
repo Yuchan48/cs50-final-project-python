@@ -1,0 +1,73 @@
+{% extends "layout.html" %} {% block title %} My Page {% endblock %} {% block
+main %}
+<div class="container">
+  <div class="title">
+    <h4>Your Issues</h4>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Message</th>
+        <th>User</th>
+        <th>Created On</th>
+        <th>Updated On</th>
+        <th>State</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if issues %} {% for issue in issues %}
+      <tr>
+        <td>{{issue[0]}}</td>
+        <td>{{issue[2]}}</td>
+        <td>{{issue[6]}}</td>
+        <td>{{issue[3]}}</td>
+        <td>{{issue[4]}}</td>
+        <td>{% if issue[7] == 1 %} open {% else %} close {% endif %}</td>
+        <td>
+          <div>
+            <a href="/mdelete/{{issue[0]}}">Delete</a>
+          </div>
+        </td>
+      </tr>
+      {% endfor %} {% else %}
+      <tr>
+        <td colspan="7">No issue: please create one below</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+
+  <div class="issue_form">
+    {% if issues %}
+    <form action="/mupdate" method="post">
+      <h4>Update Issue</h4>
+      <div class="form_col">
+        <select name="issue_id" required>
+          <option value="" selected="true" disabled="disabled">Issue ID</option>
+          {% for issue in issues %}
+          <option value="{{issue[0]}}">{{issue[0]}}</option>
+          {% endfor %}
+        </select>
+        <input
+          type="text"
+          name="message"
+          placeholder="Message"
+          class="input_wide"
+        />
+        <select name="state">
+          <option value="" selected="true" disabled="disabled">
+            Open / Close
+          </option>
+          <option value="1">Open</option>
+          <option value="0">Close</option>
+        </select>
+      </div>
+      <button type="submit">Update</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
