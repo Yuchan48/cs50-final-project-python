@@ -1,6 +1,6 @@
 # Issue Tracker  (CS50 final project)
 
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/TSJThlSyemk
 
 #### Description:
 Simple issue tracker created with Python Flask, SQL, sqlite3.
