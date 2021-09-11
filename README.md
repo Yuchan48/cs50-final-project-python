@@ -5,11 +5,11 @@
 #### Description:
 Simple issue tracker created with Python Flask, SQL, sqlite3.
  
-- Login, register functions with hashed password stored in the SQL and login data stored in the session storage.
-- In the home screen, you can see the titles of the issues with create/delete titles functions.
-- If you press details on the title in the home screen, you can see all the corresponding issues. You can also create/delete/update issues.
-- In the issue screen, you can see all the existing issues with delete function.
-- In the mypage screen, you can see all the issues which you created, with delete/update funtions.
+- Login, register functions with the hashed password stored in the SQL and login data stored in the session storage.
+- On the home screen, you can see the titles of the issues with create/delete titles functions.
+- If you press details on the title on the home screen, you can see all the corresponding issues. You can also create/delete/update issues.
+- In the issue screen, you can see all the existing issues with the delete function.
+- On the mypage screen, you can see all the issues which you created, with delete/update functions.
 
 #### how to run
 
@@ -38,3 +38,6 @@ Simple issue tracker created with Python Flask, SQL, sqlite3.
 	"state"	INTEGER NOT NULL DEFAULT 1,
 	PRIMARY KEY("id")
 )
+
+
+
